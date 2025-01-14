@@ -1,38 +1,25 @@
-import java.util.Scanner
-
-import org.omg.Messaging.SyncScopeHelper;
-
-public static void evaluarTresNumeros(int num1, int num2, int num3){
-    int mayor, menor, intermedio;
-    if (num1 >= num2 && num1 >= num3 ){
-        mayor = num1;
-
-    }else if (num2 >= num1 && num2 >= num3){
-        menor = num2;
-
-    }else{
-        menor = num3;
-
-    }
-    
-}
-
-    int suma = num1 + num2 + num3 ;
-    intermedio = suma -mayor - menor ;
-
-
-
+import java.util.Scanner;
 
 public class EjecucionNumeros {
-    public static void main (String[]args) {
+    public static void main(String[] args) {
         //CREAMOS EL OBJETO TECLADO
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduzca el numero 1");
-        String entrada  = teclado.nextLine();
-        int numero 1  = Integer.parsen.Int(entrada);
-
-        
+        //MENSAJES PARA PEDIR DATOS
+        System.out.println("Introduzca el número 1");
+        //CAPTURAMOS LO QUE EL USUARIO HA ESCRITO
+        String entrada = teclado.nextLine();
+        //CAPTURAMOS EL PRIMER NUMERO
+        int numero1 = Integer.parseInt(entrada);
+        System.out.println("Introduzca número 2");
+        entrada = teclado.nextLine();
+        int numero2 = Integer.parseInt(entrada);
+        int mayor = EvaluacionNumeros.mayorDosNumeros(num1, num2);
+        int menor = EvaluacionNumeros.menorDosNumeros(num1, num2);
+        System.out.println("Mayor: " + mayor);
+        System.out.println("Menor: " + menor);
+        System.out.println("Introduzca número 3");
+        entrada = teclado.nextLine();
+        int numero3 = Integer.parseInt(entrada);
+        EvaluacionNumeros.evaluarTresNumeros(numero1, numero2, numero3);
     }
-
-
 }

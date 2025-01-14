@@ -1,33 +1,19 @@
 import java.util.Scanner;
 
-import org.omg.Messaging.SyncScopeHelper;
-
-
 public class EjecucionPersonas {
-
     public static void main(String[] args) {
-        //12345678Z
-        //NECESITAMOS RECUPERAR LA ULTIMA LETRA DEL
-        //TEXTO charArt(... length
-        //POR OTRO LADO NECESITO LA CADENA SIN EL 
-        //ULTIMO CARACTER  substring()
-        String dni ="12345678Z";
-        //PROBAMOS A SEPARAR 
-        //AVERIGUAR LA LONGITUD
-        int longitud =dni.length()-1;
-        //recuperar el ultimo caracter
-        chart ultimaletra = dni.charAt(longitud);
-        System.out.println(ultimaLetra);
-
-        
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Introduzca número de NIF");
+        String entrada = teclado.nextLine();
+        //RECUPERAMOS EL NUMERO DE DNI
+        int numeroDni = Integer.parseInt(entrada);
+        String letra = HerramientasPersonas.getLetraNIF(numeroDni);
+        System.out.println("Su letra de NIF es " + letra);
+        System.out.println("Introduzca un DNI completo");
+        String dni = teclado.nextLine();
+        boolean respuesta = 
+            HerramientasPersonas.validarNIF(dni);
+        System.out.println("El dni " + dni 
+        + " es correcto: " + respuesta);
     }
-    public static void main(String[] args) {
-        Scanner teclado  = new Scanner (System.in);
-        System.out.println("Introduzca numero de NIF");
-        String entrada  = teclado.nextLine();
-
-        int numeroDni = Integer.parse
-        
-    }
-
 }
